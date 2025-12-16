@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RozyRozes | Fashion Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">RozyRozes</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Collections</a></li>
+                <li><a href="#" id="uploadHeader">Upload</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#categories"><i class="fas fa-layer-group"></i> Collections</a></li>
+            <li><a href="#" id="uploadMobile"><i class="fas fa-upload"></i> Upload</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Enhanced Hero Section -->
+    <section class="hero" id="home">
+        <div class="floating-element float-1"></div>
+        <div class="floating-element float-2"></div>
+        <div class="floating-element float-3"></div>
+        
+        <!-- Hero Image for Desktop -->
+        <div class="hero-image desktop-only">
+            <img src="images/1.jpg" alt="Fashion Model" class="hero-img">
+            <div class="image-overlay"></div>
+        </div>
+        
+        <!-- Hero Image for Mobile -->
+        <div class="hero-image mobile-only">
+            <img src="images/1.jpg" alt="Fashion Model" class="hero-img">
+            <div class="image-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text-wrapper">
+                    <h1 class="hero-title">
+                        <span class="title-line">REDEFINE</span>
+                        <span class="title-line accent">YOUR STYLE</span>
+                    </h1>
+                    <p class="hero-subtitle">Discover exclusive fashion pieces that blend innovation with elegance. From statement clothes to premium accessories, elevate your wardrobe with our curated collections.</p>
+                    <div class="hero-buttons">                   
+                        <button class="cta-button secondary-btn" id="exploreBtn">
+                            <i class="fas fa-eye"></i> Explore
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Unique Designs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">Fast Delivery</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="4.9">0</div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                </div>
+                
+                <!-- Featured Items Preview for Mobile -->
+                <div class="mobile-preview">
+                    <div class="preview-item">
+                        <img src="images/2.jpg" alt="Shoes">
+                        <span>Shoes</span>
+                    </div>
+                    <div class="preview-item">
+                        <img src="images/3.jpg" alt="Bags">
+                        <span>Bags</span>
+                    </div>
+                    <div class="preview-item">
+                        <img src="images/4.jpg" alt="Clothes">
+                        <span>Clothes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section" id="categories">
+        <div class="container">
+            <h2 class="section-title">Browse Collections</h2>
+            
+            <!-- Category Filter Buttons -->
+            <div class="categories-grid">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-layer-group"></i> All Items
+                </button>
+                <button class="category-btn" data-category="clothes">
+                    <i class="fas fa-tshirt"></i> Clothes
+                </button>
+                <button class="category-btn" data-category="shoes">
+                    <i class="fas fa-shoe-prints"></i> Shoes
+                </button>
+                <button class="category-btn" data-category="bags">
+                    <i class="fas fa-briefcase"></i> School Bags
+                </button>
+            </div>
+
+            <!-- Collections Grid - Will be populated dynamically -->
+            <div class="collections-grid" id="collectionsGrid">
+                <!-- Items will be added here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="uploadSection">
+        <div class="upload-container">
+            <button class="close-upload" id="closeUpload">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="upload-header">
+                <h2>Upload Your Design</h2>
+                <p>Share your fashion creation with our community. Your design will appear instantly in our collections.</p>
+            </div>
+            
+            <div class="upload-area" id="uploadDropzone">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h3>Drop outfit images here</h3>
+                <p>or click to browse. Max 10MB per image.</p>
+                <input type="file" id="fileInput" class="form-control" accept="image/*" multiple style="display: none;">
+                <button class="cta-button" id="browseFiles" style="margin-top: 20px;">
+                    <i class="fas fa-folder-open"></i> Select Images
+                </button>
+            </div>
+            
+            <div id="imagePreview" class="upload-preview"></div>
+            
+            <form id="uploadForm" class="upload-form">
+                <div class="form-group">
+                    <label for="designName">Outfit Name</label>
+                    <input type="text" id="designName" class="form-control" placeholder="Enter outfit name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="designerName">Designer Name</label>
+                    <input type="text" id="designerName" class="form-control" placeholder="Your name or brand">
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" class="form-control" required>
+                        <option value="">Select category</option>
+                        <option value="clothes">Clothes</option>
+                        <option value="shoes">Shoes</option>
+                        <option value="bags">School Bags</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="price">Price (Ksh)</label>
+                    <input type="number" id="price" class="form-control" placeholder="0.00" min="0" step="0.01" required>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="description">Description</label>
+                    <textarea id="description" class="form-control" rows="4" placeholder="Describe your outfit, materials, inspiration..." required></textarea>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="tags">Tags (comma separated)</label>
+                    <input type="text" id="tags" class="form-control" placeholder="e.g., casual, formal, summer, designer">
+                </div>
+                
+                <div class="upload-actions">
+                    <button type="submit" class="cta-button" style="flex: 2;">
+                        <i class="fas fa-upload"></i> Publish Outfit
+                    </button>
+                    <button type="button" id="clearForm" class="cta-button" style="flex: 1; background: rgba(255,255,255,0.05);">
+                        <i class="fas fa-trash"></i> Clear
+                    </button>
+                </div>
+            </form>
+            
+            <div id="uploadStatus" style="margin-top: 30px; text-align: center;"></div>
+        </div>
+    </section>
+
+    <!-- Outfit Details Popup -->
+    <div id="outfitPopup" class="outfit-popup">
+        <div class="popup-overlay" id="popupOverlay"></div>
+        <div class="popup-container">
+            <button class="close-popup" id="closePopup">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="popup-content">
+                <div class="popup-image-container">
+                    <img id="popupImage" src="" alt="Outfit Image" class="popup-image">
+                    <div class="image-nav">
+                        <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                        <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                
+                <div class="popup-details">
+                    <div class="popup-header">
+                        <span class="popup-category" id="popupCategory"></span>
+                        <h2 id="popupName"></h2>
+                        <div class="popup-designer">
+                            <i class="fas fa-user"></i>
+                            <span id="popupDesigner"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="popup-description">
+                        <h3>Description</h3>
+                        <p id="popupDescription"></p>
+                    </div>
+                    
+                    <div class="popup-tags">
+                        <h3>Tags</h3>
+                        <div class="tags-container" id="popupTags"></div>
+                    </div>
+                    
+                    <div class="popup-actions">
+                        <div class="price-container">
+                            <span class="price-label">Price:</span>
+                            <div class="popup-price" id="popupPrice"></div>
+                        </div>
+                        <button class="cta-button buy-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="cta-button secondary-btn">
+                            <i class="fas fa-heart"></i> Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RozyRozes</h3>
+                    <p style="margin-bottom: 20px;">The ultimate destination for modern fashion. Discover, share, and shop unique outfits and accessories.</p>
+                    <div class="social-grid">
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/rozyrozes" target="_blank" class="social-icon" title="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://facebook.com/rozzysonestoponlinestore" target="_blank" class="social-icon" title="Like us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="https://tiktok.com/@rozyrozes" target="_blank" class="social-icon" title="Follow us on TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/254726154200" target="_blank" class="social-icon" title="Chat on WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> Collections</a></li>
+                        <li><a href="#" id="uploadFooter"><i class="fas fa-chevron-right"></i> Upload Design</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://maps.google.com/?q=Nairobi+Kenya" target="_blank">
+                                <i class="fas fa-map-marker-alt"></i> Nairobi, Kenya
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+254726154200">
+                                <i class="fas fa-phone"></i> +254 726 154 200
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:rozyrozes85@gmail.com">
+                                <i class="fas fa-envelope"></i> rozyrozes85@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/254726154200" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp Chat
+                            </a>
+                        </li>
+                        <li><i class="fas fa-clock"></i> Mon-Sun: 8AM-10PM EAT</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 RozyRozes Fashion. All rights reserved. | Redefining Modern Style</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
