@@ -1458,26 +1458,7 @@ footer {
     .stat-number {
         font-size: 36px;
     }
-    
-    /* Single column on very small screens */
-    @media (max-width: 200px) {
-        .collections-grid {
-            grid-template-columns: 1fr;
-        }
-        
-        /* Adjust social grid for very small screens */
-        .social-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            justify-items: center;
-        }
-        
-        .social-icon {
-            width: 60px;
-            height: 60px;
-            font-size: 24px;
-        }
-    }
+
     
     /* 2 columns on most mobile screens */
     @media (min-width: 401px) and (max-width: 768px) {
