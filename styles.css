@@ -427,13 +427,13 @@ header {
 
 /* Categories Section */
 .section {
-    padding: 100px 0;
+    padding: 80px 0;
     position: relative;
 }
 
 .section-title {
     font-size: 48px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     text-align: center;
     position: relative;
 }
@@ -441,10 +441,10 @@ header {
 .section-title:after {
     content: '';
     position: absolute;
-    bottom: -20px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 60px;
     height: 4px;
     background: var(--gradient);
     border-radius: 2px;
@@ -454,15 +454,15 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 40px;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
 .category-btn {
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 50px;
-    padding: 18px 35px;
+    padding: 15px 25px;
     font-size: 16px;
     font-weight: 700;
     color: var(--text);
@@ -470,7 +470,7 @@ header {
     transition: var(--transition);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     backdrop-filter: blur(10px);
     position: relative;
     overflow: hidden;
@@ -493,7 +493,7 @@ header {
 }
 
 .category-btn:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     border-color: transparent;
     box-shadow: var(--shadow-hover);
 }
@@ -505,15 +505,15 @@ header {
 }
 
 .category-btn i {
-    font-size: 22px;
+    font-size: 20px;
 }
 
-/* Collections Grid - Optimized for Mobile */
+/* Collections Grid - Cute & Compact Design */
 .collections-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
     opacity: 1;
     transition: opacity 0.3s ease;
 }
@@ -524,7 +524,7 @@ header {
 
 .collection-card {
     background: var(--card-bg);
-    border-radius: 20px;
+    border-radius: 18px;
     overflow: hidden;
     transition: var(--transition);
     border: 1px solid var(--border);
@@ -536,6 +536,7 @@ header {
     height: 100%;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .collection-card.hidden {
@@ -548,24 +549,24 @@ header {
 }
 
 .collection-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     border-color: var(--accent);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 20px 40px rgba(255, 62, 128, 0.25);
 }
 
 .collection-img {
-    height: 280px;
+    height: 220px;
     width: 100%;
     object-fit: cover;
     transition: var(--transition);
 }
 
 .collection-card:hover .collection-img {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .collection-info {
-    padding: 24px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -573,16 +574,16 @@ header {
 }
 
 .collection-name {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     color: var(--text);
     font-family: 'Syne', sans-serif;
     line-height: 1.3;
 }
 
 .collection-price {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 800;
     background: var(--gradient);
     -webkit-background-clip: text;
@@ -591,18 +592,18 @@ header {
     color: transparent;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
 }
 
 .price-label {
-    font-size: 15px;
+    font-size: 14px;
     color: var(--text-muted);
     font-weight: 500;
 }
 
 .view-details {
-    margin-top: 16px;
-    font-size: 15px;
+    margin-top: 12px;
+    font-size: 14px;
     color: var(--accent);
     font-weight: 600;
     display: flex;
@@ -614,6 +615,37 @@ header {
 
 .collection-card:hover .view-details {
     opacity: 1;
+}
+
+/* Cute heart icon for favorites */
+.favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 2;
+    color: #666;
+    font-size: 18px;
+}
+
+.favorite-btn:hover {
+    background: var(--accent);
+    color: white;
+    transform: scale(1.1);
+}
+
+.favorite-btn.active {
+    background: var(--accent);
+    color: white;
 }
 
 /* Outfit Details Popup */
@@ -1058,20 +1090,20 @@ header {
 /* Footer */
 footer {
     background: var(--secondary);
-    padding: 80px 0 40px;
+    padding: 60px 0 30px;
     border-top: 1px solid var(--border);
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 50px;
-    margin-bottom: 60px;
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
 .footer-column h3 {
     font-size: 22px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     position: relative;
     padding-bottom: 10px;
 }
@@ -1169,7 +1201,7 @@ footer {
 }
 
 .footer-links li {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .footer-links a {
@@ -1192,7 +1224,7 @@ footer {
 
 .copyright {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 30px;
     border-top: 1px solid var(--border);
     color: var(--text-muted);
     font-size: 14px;
@@ -1237,7 +1269,7 @@ footer {
     50% { transform: translateY(-40px) rotate(180deg); }
 }
 
-/* ========== RESPONSIVE DESIGN - UPDATED ========== */
+/* ========== MOBILE RESPONSIVE - CUTE & COMPACT ========== */
 @media (max-width: 1200px) {
     .hero-title {
         font-size: 68px;
@@ -1257,7 +1289,8 @@ footer {
     }
     
     .collections-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
     }
 }
 
@@ -1281,19 +1314,19 @@ footer {
     /* 3 columns on tablet */
     .collections-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
+        gap: 20px;
     }
     
     .collection-img {
-        height: 240px;
+        height: 200px;
     }
     
     .collection-name {
-        font-size: 22px;
+        font-size: 18px;
     }
     
     .collection-price {
-        font-size: 24px;
+        font-size: 22px;
     }
     
     /* Adjust social grid for tablet */
@@ -1325,59 +1358,77 @@ footer {
     }
     
     .hero-title {
-        font-size: 48px;
+        font-size: 42px;
     }
     
     .hero-subtitle {
         font-size: 18px;
+        margin-bottom: 30px;
+    }
+    
+    .section {
+        padding: 60px 0;
     }
     
     .section-title {
-        font-size: 36px;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .section-title:after {
+        width: 50px;
+        bottom: -12px;
     }
     
     .upload-container {
-        padding: 30px;
-        margin: 80px auto 30px;
+        padding: 25px;
+        margin: 70px auto 25px;
     }
     
     .upload-header h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
     
     .categories-grid {
-        gap: 15px;
-        justify-content: center;
+        gap: 12px;
+        margin-bottom: 25px;
     }
     
     .category-btn {
-        padding: 15px 25px;
-        font-size: 15px;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 40px;
     }
     
-    /* 2 COLUMNS ON MOBILE - FIXED */
+    /* 2 COLUMNS - CUTE & COMPACT MOBILE DESIGN */
     .collections-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
-        margin-top: 30px;
+        gap: 15px;
+        margin-top: 25px;
     }
     
     .collection-card {
-        min-height: 320px;
+        min-height: 280px;
         border-radius: 16px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    
+    .collection-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(255, 62, 128, 0.2);
     }
     
     .collection-img {
-        height: 180px;
+        height: 160px;
         border-radius: 16px 16px 0 0;
     }
     
     .collection-info {
-        padding: 18px;
+        padding: 15px;
     }
     
     .collection-name {
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 8px;
         line-height: 1.3;
         overflow: hidden;
@@ -1388,33 +1439,45 @@ footer {
     }
     
     .collection-price {
-        font-size: 20px;
-        gap: 5px;
+        font-size: 18px;
+        gap: 4px;
         margin-top: auto;
     }
     
     .price-label {
-        font-size: 13px;
+        font-size: 12px;
     }
     
     .view-details {
-        font-size: 13px;
-        margin-top: 12px;
+        font-size: 12px;
+        margin-top: 10px;
         opacity: 0.7;
+    }
+    
+    .favorite-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        top: 12px;
+        right: 12px;
     }
     
     .hero-stats {
         flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
+        gap: 25px;
+        margin-top: 30px;
+    }
+    
+    .stat-number {
+        font-size: 36px;
     }
     
     .hero-image.mobile-only {
         display: block;
         position: relative;
         width: 100%;
-        height: 300px;
-        margin: 40px 0;
+        height: 250px;
+        margin: 30px 0;
         border-radius: 20px;
         transform: none;
         top: 0;
@@ -1423,47 +1486,51 @@ footer {
     .hero-buttons {
         flex-direction: column;
         align-items: stretch;
+        gap: 15px;
     }
     
     .cta-button {
         justify-content: center;
+        padding: 14px 25px;
     }
     
     .mobile-preview {
         display: grid;
+        gap: 12px;
+        margin-top: 30px;
     }
     
     .floating-badge {
-        top: 20px;
-        right: 20px;
-        padding: 10px 15px;
-        font-size: 12px;
+        top: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 11px;
     }
     
     /* Popup mobile styling */
     .popup-container {
-        margin: 20px auto;
+        margin: 15px auto;
         border-radius: 20px;
     }
     
     .popup-details {
-        padding: 25px;
+        padding: 20px;
         max-height: 50vh;
         overflow-y: auto;
     }
     
     .popup-details h2 {
-        font-size: 28px;
+        font-size: 24px;
     }
     
     .popup-price {
-        font-size: 28px;
+        font-size: 24px;
     }
     
     .popup-actions {
         flex-direction: column;
         align-items: stretch;
-        gap: 15px;
+        gap: 12px;
     }
     
     .buy-btn {
@@ -1485,15 +1552,23 @@ footer {
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 20px;
+        padding: 0 15px;
     }
     
     .hero-title {
-        font-size: 42px;
+        font-size: 36px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
     }
     
     .section {
-        padding: 80px 0;
+        padding: 50px 0;
+    }
+    
+    .section-title {
+        font-size: 28px;
     }
     
     .upload-container {
@@ -1502,94 +1577,36 @@ footer {
     }
     
     .categories-grid {
-        justify-content: center;
+        gap: 10px;
     }
     
     .category-btn {
-        padding: 12px 20px;
-        font-size: 14px;
+        padding: 10px 16px;
+        font-size: 13px;
     }
     
     .stat-number {
-        font-size: 36px;
+        font-size: 32px;
     }
     
-    /* Optimize 2-column layout for very small screens */
+    /* Extra compact 2-column layout */
     .collections-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 12px;
     }
     
     .collection-card {
-        min-height: 280px;
+        min-height: 250px;
         border-radius: 14px;
     }
     
     .collection-img {
-        height: 150px;
+        height: 140px;
         border-radius: 14px 14px 0 0;
     }
     
     .collection-info {
-        padding: 15px;
-    }
-    
-    .collection-name {
-        font-size: 16px;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        line-clamp: 2;
-    }
-    
-    .collection-price {
-        font-size: 18px;
-    }
-    
-    .price-label {
-        font-size: 12px;
-    }
-    
-    /* Adjust social grid for very small screens */
-    .social-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        justify-items: center;
-    }
-    
-    .social-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-    }
-    
-    .popup-details h2 {
-        font-size: 24px;
-    }
-    
-    .popup-description p {
-        font-size: 14px;
-    }
-    
-    .popup-actions {
-        gap: 12px;
-    }
-}
-
-@media (max-width: 360px) {
-    /* Extra small devices */
-    .collections-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-    
-    .collection-card {
-        min-height: 260px;
-    }
-    
-    .collection-img {
-        height: 140px;
+        padding: 12px;
     }
     
     .collection-name {
@@ -1605,20 +1622,93 @@ footer {
         font-size: 16px;
     }
     
+    .price-label {
+        font-size: 11px;
+    }
+    
+    .view-details {
+        font-size: 11px;
+        margin-top: 8px;
+    }
+    
+    .favorite-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+        top: 10px;
+        right: 10px;
+    }
+    
+    /* Adjust social grid for very small screens */
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        justify-items: center;
+    }
+    
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .popup-details h2 {
+        font-size: 22px;
+    }
+    
+    .popup-description p {
+        font-size: 14px;
+    }
+    
+    .popup-actions {
+        gap: 10px;
+    }
+    
+    .hero-buttons .cta-button {
+        font-size: 15px;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    /* Extra small devices - even more compact */
+    .collections-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .collection-card {
+        min-height: 230px;
+        border-radius: 12px;
+    }
+    
+    .collection-img {
+        height: 130px;
+        border-radius: 12px 12px 0 0;
+    }
+    
     .collection-info {
-        padding: 12px;
+        padding: 10px;
+    }
+    
+    .collection-name {
+        font-size: 14px;
+    }
+    
+    .collection-price {
+        font-size: 15px;
     }
     
     .hero-title {
-        font-size: 36px;
+        font-size: 32px;
     }
     
     .hero-subtitle {
-        font-size: 16px;
+        font-size: 15px;
     }
     
     .section-title {
-        font-size: 32px;
+        font-size: 26px;
     }
 }
         
