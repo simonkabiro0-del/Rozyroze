@@ -1460,9 +1460,9 @@ footer {
     }
     
     /* Single column on very small screens */
-    @media (max-width: 400px) {
+    @media (max-width: 100px) {
         .collections-grid {
-            grid-template-columns: 2fr;
+            grid-template-columns: 1fr;
         }
         
         /* Adjust social grid for very small screens */
