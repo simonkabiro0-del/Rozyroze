@@ -1460,11 +1460,20 @@ footer {
     }
     
     /* Single column on very small screens */
-    @media (max-width: 100px) {
+    @media (max-width: 400px) {
         .collections-grid {
-            grid-template-columns: 1fr;
+            grid-template-columns: 2, 1fr;
         }
         
+        .collection-img {
+            height: 180px;
+        }
+        .collection-name {
+            font-size: 18px;
+        }
+        .collection-price {
+            font-size: 20px;
+        }
         /* Adjust social grid for very small screens */
         .social-grid {
             grid-template-columns: repeat(2, 1fr);
